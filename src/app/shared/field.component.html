@@ -1,0 +1,15 @@
+<div class="field-container">
+  @if(label){
+  <label [for]="for" [class.disabled]="showValidation">
+    {{ label + " " + "*" }}
+  </label>
+  }
+
+  <ng-container>
+    <ng-content></ng-content>
+  </ng-container>
+
+  @if(showValidation){
+  <p class="warning-text">{{ requiredField }}</p>
+  }
+</div>

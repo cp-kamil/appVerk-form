@@ -1,0 +1,26 @@
+<div class="parent">
+<main class="main-wrapper">
+  <div class="title-wrapper">
+  <h1 class="title">{{title}}</h1>
+  </div>
+<div class="form-wrapper">
+  <form class="card-content" [formGroup]="form" (submit)="submit($event)" novalidate autocomplete="off">
+
+    <form-field class="form-field" for="username" label="Podaj email" [showValidation]="emailForm.invalid && emailForm.touched">
+      <input [ngClass]="{'input-error': emailForm.invalid && emailForm.touched}" class="input" id="username" type="text" formControlName="username">
+    </form-field>
+
+    <form-field class="form-field" for="password" [showValidation]="passwordForm.invalid && passwordForm.touched" label="Podaj hasło">
+      <input [ngClass]="{'input-error': passwordForm.invalid && passwordForm.touched}" class="input" id="password" type="password" formControlName="password">
+    </form-field>
+
+      <button type="submit" aria-label="Zaloguj" class="button button-action">{{logIn}}</button>
+  </form>
+
+  <footer class="card-footer">
+    <p>Kamil Purta</p>
+    <p><span >email: </span> <a class="card-url" href="mailto:k_purta@o2.pl" >k_purta&#64;o2.pl</a></p>
+  </footer>
+</div>
+</main>
+</div>

@@ -1,0 +1,100 @@
+$base-bgc-color: #ff9b00;
+$base-color: #0E161E;
+
+.parent {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+}
+
+.main-wrapper {
+  width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+  position: relative;
+  .title-wrapper{
+    background-color: $base-bgc-color;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title {
+      color: $base-color;
+      font-family: "Fira Sans", Sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+      letter-spacing: 1px;
+    }
+  }
+  .form-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+      .form-field {
+        margin:auto;
+      }
+    .card-content{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin:auto;
+
+      .input {
+        font-family: "Fira Sans", sans-serif;
+        background: #F3F3F3;
+        height: 1rem;
+        margin-bottom: 2px;
+        padding: 7px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 1px;
+        color: #272E35;
+        border: 1px solid #F3F3F3;
+      }
+      .input-error {
+        border: red 1px solid;
+    }
+    }
+    .button {
+      background-color: #3E454B;
+      color: white;
+      font-weight: 100;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      letter-spacing: 1px;
+      margin:auto;
+      width: 14vw;
+      &:hover {
+        background-color: $base-bgc-color;
+        color: $base-color;
+        cursor: pointer;
+        transition: all .4s;
+      }
+    }
+  }
+
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 20px;
+  font-size: 1rem;
+  color: $base-color;
+  background-color: $base-bgc-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
