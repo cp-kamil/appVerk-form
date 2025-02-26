@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   public submit($event: Event): void {
-
     if (this.form.invalid) {
       $event.preventDefault();
       validateAllFormFields(this.form);
