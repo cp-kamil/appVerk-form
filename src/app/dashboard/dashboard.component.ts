@@ -10,10 +10,11 @@ import { Observable, take } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent implements OnInit {
-  users: any[] = [];
 
+  protected users: string[] = [];
   protected readonly logOut = "Wyloguj"
-  constructor(private http: HttpClient, public authService: AuthService) {
+  
+  constructor(public authService: AuthService) {
      this.authService.fetchUserData().pipe(take(1)).subscribe(user => this.users = user)
   }
 
